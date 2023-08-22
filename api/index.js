@@ -17,5 +17,3 @@ mongoose
   .catch((error) => console.log(error));
 
 const app = express();
-
-// CuqzclGmfLnfZJ6S

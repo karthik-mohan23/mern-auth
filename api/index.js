@@ -1,9 +1,9 @@
-const { error } = require("console");
+require("dotenv").config();
 const express = require("express");
-
 const mongoose = require("mongoose");
 
-require("dotenv").config();
+// routes
+const userRoute = require("./routes/userRoute");
 
 // we are not sure we have connected to the database so,
 mongoose
@@ -17,3 +17,5 @@ mongoose
   .catch((error) => console.log(error));
 
 const app = express();
+
+app.use("/api/user", userRoute);
